@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.BackEnd.Final.FinalApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.75 s - in com.BackEnd.Final.FinalApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.405 s - in com.BackEnd.Final.FinalApplicationTests
