@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/experLab")
-@CrossOrigin(origins = "http://localhost:4200", allowCredentials="true")
+@CrossOrigin(origins = {"http://localhost:4200/",  "https://portfolio-sebastian-dd53c.web.app/"})
 public class ExperLabController {
     
     @Autowired
