@@ -6,9 +6,10 @@ import com.BackEnd.Final.services.PersonaService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/personas")
@@ -20,23 +21,19 @@ public class PersonaController {
 
     @GetMapping("/list")
     public ResponseEntity<?> list(){
-        return new ResponseEntity<>(personaService.list(), HttpStatus.OK);
+        List<Persona> lista = personaService.list();
+        return new ResponseEntity<>(lista, HttpStatus.OK);
     }
 
-    @GetMapping("/verPersona")
-    public Persona verPersona(){
-        return personaService.verPersona((long)1);
-    }
-
-    @GetMapping("/detail/{id}")
+    @GetMapping("/details/{id}")
     public ResponseEntity<?> detail(@PathVariable("id") Long id){
         if(!personaService.existById(id)){
             return new ResponseEntity<>(new MessageResponse("no existe esa persona"), HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(personaService.detail(id), HttpStatus.OK);
+        Persona persona = personaService.detail(id);
+        return new ResponseEntity<>(persona, HttpStatus.OK);
     }
-
-    @PostMapping(value = "/new", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody Persona persona){
         if(StringUtils.isBlank(persona.getNombre())){
             return new ResponseEntity<>(new MessageResponse("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);

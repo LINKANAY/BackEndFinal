@@ -33,6 +33,10 @@ public class Persona {
         this.pais = pais;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getNombre() {
         return nombre;
     }
