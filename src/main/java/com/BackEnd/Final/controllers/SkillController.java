@@ -38,6 +38,7 @@ public class SkillController {
         Skill skill = skillService.detail(id);
         skill.setNombreSkill(newSkill.getNombreSkill());
         skill.setPorcentaje(newSkill.getPorcentaje());
+        skill.setLogo(newSkill.getLogo());
         skillService.create(skill);
         return new ResponseEntity<>(new MessageResponse("el skill se ha actualizado"), HttpStatus.OK);
     }

@@ -9,13 +9,15 @@ public class Skill {
     private Long id;
     private String nombreSkill;
     private double porcentaje;
+    private String logo;
 
     public Skill() {
     }
 
-    public Skill(String nombreSkill, double porcentaje) {
+    public Skill(String nombreSkill, double porcentaje, String logo) {
         this.nombreSkill = nombreSkill;
         this.porcentaje = porcentaje;
+        this.logo = logo;
     }
 
     public String getNombreSkill() {
@@ -32,6 +34,14 @@ public class Skill {
 
     public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public Long getId() {
