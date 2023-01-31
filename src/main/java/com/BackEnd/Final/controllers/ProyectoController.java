@@ -39,6 +39,7 @@ public class ProyectoController {
         proyecto.setNombreProyecto(newProyecto.getNombreProyecto());
         proyecto.setDescripcion(newProyecto.getDescripcion());
         proyecto.setImg(newProyecto.getImg());
+        proyecto.setUrl(newProyecto.getUrl());
         proyectoService.create(proyecto);
         return new ResponseEntity<>(new MessageResponse("el proyecto se ha actualizado"), HttpStatus.OK);
     }
