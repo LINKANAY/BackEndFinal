@@ -17,7 +17,7 @@ public class FinalApplication {
 		Statement stmt = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://by3i9saxaffj2io0di3o-mysql.services.clever-cloud.com:3306/by3i9saxaffj2io0di3o", "uqwswxcbivy9ofsy", "JVNOlTPxOlPGBuPGrLna");
+			con = DriverManager.getConnection("jdbc:mysql://by3i9saxaffj2io0di3o-mysql.services.clever-cloud.com:3306/by3i9saxaffj2io0di3o", "uqwswxcbivy9ofsy", "QDQNMwn6K124N1I3ekXK");
 			stmt = con.createStatement();
 			String sql = "INSERT INTO roles (id, name) VALUES (null, 'ROLE_ADMIN')";
 			String sql2 = "INSERT INTO roles (id, name) VALUES (null, 'ROLE_USER')";
